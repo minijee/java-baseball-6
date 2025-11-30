@@ -7,13 +7,13 @@ import java.util.List;
 
 public class CreateRandomNumber {
 
-    private static List<Integer> list;
+    private List<Integer> list;
 
     /**
      * 3자리 랜덤 숫자를 생성
      * @return 3자리 숫자로 구성된 문자열
      */
-    public static List<Integer> generate() {
+    public List<Integer> generate() {
         list = new ArrayList<>();
         int idx = 0;
         int number = 0;
@@ -39,7 +39,7 @@ public class CreateRandomNumber {
      * @param number 생성된 랜덤 숫자
      * @return 중복 여부
      */
-    private static boolean duplicate(int number) {
+    private boolean duplicate(int number) {
 
         return list.contains(number);
     }
