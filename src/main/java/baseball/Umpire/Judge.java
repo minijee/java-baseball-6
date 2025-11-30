@@ -54,4 +54,15 @@ public class Judge {
 
         return new JudgeResult(ballCount, strikeCount);
     }
+
+    /**
+     * 정답 여부 반환
+     * @param judgeResult 볼 개수, 스트라이크 개수 
+     * @return 정답 여부
+     */
+    public static boolean isCorrectAnswer(JudgeResult judgeResult) {
+        if(judgeResult.getStrikeCount() == 3) return true;
+
+        return false;
+    }
 }
