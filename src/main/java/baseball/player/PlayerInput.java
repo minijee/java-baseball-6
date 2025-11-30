@@ -1,5 +1,6 @@
 package baseball.player;
 
+import baseball.Umpire.PlayerInputValidate;
 import camp.nextstep.edu.missionutils.Console;
 
 import java.util.ArrayList;
