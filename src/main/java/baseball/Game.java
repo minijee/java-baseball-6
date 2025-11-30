@@ -28,7 +28,8 @@ public class Game {
         while(true) {
             //3. 사용자 입력
             printMessage.printInputMessage(ProcessMessage.INPUT.getText());
-            List<Integer> inputNumberList = PlayerInput.inputRandomNumber();
+            PlayerInput playerInput = new PlayerInput();
+            List<Integer> inputNumberList = playerInput.inputRandomNumber();
 
             //4. 평가 진행
             JudgeResult judgeResult = Judge.evaluate(randomNumberList, inputNumberList);

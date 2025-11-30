@@ -13,7 +13,7 @@ public class PlayerInput {
      * 사용자가 입력한 3자리 숫자 받기
      * @return 사용자가 입력한 숫자 리스트
      */
-    public static List<Integer> inputRandomNumber() {
+    public List<Integer> inputRandomNumber() {
         inputNumberlist = new ArrayList<>();
         char[] inputArr = Console.readLine().trim().toCharArray();
 
@@ -32,7 +32,7 @@ public class PlayerInput {
      * 사용자가 입력한 게임 계속 진행 여부 받기
      * @return 사용자 입력 숫자
      */
-    public static int inputRegameNumber() {
+    public int inputRegameNumber() {
         String inputStr = Console.readLine().trim();
 
         if(!PlayerInputValidate.isInputRegameValidate(inputStr)) {
