@@ -27,4 +27,17 @@ public class PlayerInput {
         return inputNumberlist;
     }
 
+    /**
+     * 사용자가 입력한 게임 계속 진행 여부 받기
+     * @return 사용자 입력 숫자
+     */
+    public static int inputRegameNumber() {
+        String inputStr = Console.readLine().trim();
+
+        if(!PlayerInputValidate.isInputRegameValidate(inputStr)) {
+            throw new IllegalArgumentException();
+        }
+
+        return Integer.parseInt(inputStr);
+    }
 }
