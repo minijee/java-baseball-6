@@ -1,0 +1,30 @@
+package baseball.player;
+
+import camp.nextstep.edu.missionutils.Console;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class PlayerInput {
+    private static List<Integer> inputNumberlist;
+
+    /**
+     * 사용자가 입력한 3자리 숫자 받기
+     * @return 사용자가 입력한 숫자 리스트
+     */
+    public static List<Integer> inputRandomNumber() {
+        inputNumberlist = new ArrayList<>();
+        char[] inputArr = Console.readLine().trim().toCharArray();
+
+        if(!PlayerInputValidate.isInputRandomNumberValidate(inputArr)) { //입력값 검증
+            throw new IllegalArgumentException();
+        };
+
+        for(char inputNum : inputArr) {
+            inputNumberlist.add(inputNum - '0');
+        }
+
+        return inputNumberlist;
+    }
+
+}
