@@ -9,7 +9,7 @@ public class PrintMessage {
      * 정보 메시지 출력
      * @param message 출력할 메시지
      */
-    public static void printInfoMessage(String message) {
+    public void printInfoMessage(String message) {
         System.out.println(message);
     }
 
@@ -17,7 +17,7 @@ public class PrintMessage {
      * 입력 요청 메시지 출력
      * @param message 출력할 메시지
      */
-    public static void printInputMessage(String message) {
+    public void printInputMessage(String message) {
         System.out.print(message);
     }
 
@@ -25,7 +25,7 @@ public class PrintMessage {
      * 판정 결과 메시지 출력
      * @param judgeResult 판정 결과
      */
-    public static void printJudgeResultMessage(JudgeResult judgeResult) {
+    public void printJudgeResultMessage(JudgeResult judgeResult) {
         int ballCount = judgeResult.getBallCount();
         int strikeCount = judgeResult.getStrikeCount();
 
@@ -42,7 +42,7 @@ public class PrintMessage {
     /**
      * 정답 메시지 출력
      */
-    public static void printCorrectAnswer() {
+    public void printCorrectAnswer() {
         System.out.println(ProcessMessage.END.getText());
         System.out.println(ProcessMessage.REGAME.getText());
     }
