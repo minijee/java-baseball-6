@@ -10,7 +10,7 @@ public class Judge {
      * @param inputNumberList 입력 숫자 리스트
      * @return 볼 개수
      */
-    private static int countBall(List<Integer> randomNumberList, List<Integer> inputNumberList) {
+    private int countBall(List<Integer> randomNumberList, List<Integer> inputNumberList) {
         int count = 0;
 
         for(int i = 0; i < 3; i++) {
@@ -30,7 +30,7 @@ public class Judge {
      * @param inputNumberList 입력 숫자 리스트
      * @return 스트라이크 개수
      */
-    private static int countStrike(List<Integer> randomNumberList, List<Integer> inputNumberList) {
+    private int countStrike(List<Integer> randomNumberList, List<Integer> inputNumberList) {
         int count = 0;
 
         for(int i = 0; i < 3; i++) {
@@ -48,7 +48,7 @@ public class Judge {
      * @param inputNumberList 입력 숫자 리스트
      * @return 볼 개수, 스트라이크 개수 결과
      */
-    public static JudgeResult evaluate(List<Integer> randomNumberList, List<Integer> inputNumberList) {
+    public JudgeResult evaluate(List<Integer> randomNumberList, List<Integer> inputNumberList) {
         int ballCount = countBall(randomNumberList, inputNumberList);
         int strikeCount = countStrike(randomNumberList, inputNumberList);
 
@@ -60,7 +60,7 @@ public class Judge {
      * @param judgeResult 볼 개수, 스트라이크 개수 
      * @return 정답 여부
      */
-    public static boolean isCorrectAnswer(JudgeResult judgeResult) {
+    public boolean isCorrectAnswer(JudgeResult judgeResult) {
         if(judgeResult.getStrikeCount() == 3) return true;
 
         return false;

@@ -32,13 +32,14 @@ public class Game {
             List<Integer> inputNumberList = playerInput.inputRandomNumber();
 
             //4. 평가 진행
-            JudgeResult judgeResult = Judge.evaluate(randomNumberList, inputNumberList);
+            Judge judge = new Judge();
+            JudgeResult judgeResult = judge.evaluate(randomNumberList, inputNumberList);
 
             //5. 평가 결과
             printMessage.printJudgeResultMessage(judgeResult);
 
             //6. 정답 시 계속 진행 여부
-            if(Judge.isCorrectAnswer(judgeResult)) {
+            if(judge.isCorrectAnswer(judgeResult)) {
                 printMessage.printCorrectAnswer();
 
                 if(Regame.doRegame()) { //재시작 시
