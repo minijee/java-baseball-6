@@ -17,7 +17,8 @@ public class PlayerInput {
         inputNumberlist = new ArrayList<>();
         char[] inputArr = Console.readLine().trim().toCharArray();
 
-        if(!PlayerInputValidate.isInputRandomNumberValidate(inputArr)) { //입력값 검증
+        PlayerInputValidate playerInputValidate = new PlayerInputValidate();
+        if(!playerInputValidate.isInputRandomNumberValidate(inputArr)) { //입력값 검증
             throw new IllegalArgumentException();
         };
 
@@ -35,7 +36,8 @@ public class PlayerInput {
     public int inputRegameNumber() {
         String inputStr = Console.readLine().trim();
 
-        if(!PlayerInputValidate.isInputRegameValidate(inputStr)) {
+        PlayerInputValidate playerInputValidate = new PlayerInputValidate();
+        if(!playerInputValidate.isInputRegameValidate(inputStr)) {
             throw new IllegalArgumentException();
         }
 
