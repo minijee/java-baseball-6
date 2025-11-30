@@ -20,7 +20,8 @@ public class Game {
         PrintMessage.printInfoMessage(ProcessMessage.START.getText());
 
         //2. 랜덤 3자리 숫자 생성
-        List<Integer> randomNumberList = CreateRandomNumber.generate();
+        CreateRandomNumber createRandomNumber = new CreateRandomNumber();
+        List<Integer> randomNumberList = createRandomNumber.generate();
         System.out.println(randomNumberList);
 
         while(true) {
@@ -39,7 +40,7 @@ public class Game {
                 PrintMessage.printCorrectAnswer();
 
                 if(Regame.doRegame()) { //재시작 시
-                    randomNumberList = CreateRandomNumber.generate();
+                    randomNumberList = createRandomNumber.generate();
                     System.out.println(randomNumberList);
                 } else { //종료 시
                     return;
