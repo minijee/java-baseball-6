@@ -1,4 +1,4 @@
-package baseball.player;
+package baseball.Umpire;
 
 public class PlayerInputValidate {
 
