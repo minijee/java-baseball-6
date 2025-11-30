@@ -42,7 +42,8 @@ public class Game {
             if(judge.isCorrectAnswer(judgeResult)) {
                 printMessage.printCorrectAnswer();
 
-                if(Regame.doRegame()) { //재시작 시
+                Regame regame = new Regame();
+                if(regame.doRegame()) { //재시작 시
                     randomNumberList = createRandomNumber.generate();
                     System.out.println(randomNumberList);
                 } else { //종료 시
