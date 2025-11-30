@@ -1,11 +1,7 @@
-package baseball;
+package baseball.computer;
 
 import baseball.Umpire.Judge;
 import baseball.Umpire.JudgeResult;
-import baseball.computer.CreateRandomNumber;
-import baseball.computer.PrintMessage;
-import baseball.computer.ProcessMessage;
-import baseball.computer.Regame;
 import baseball.player.PlayerInput;
 
 import java.util.List;
